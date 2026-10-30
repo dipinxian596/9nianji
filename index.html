@@ -4,39 +4,83 @@
     <meta charset="UTF-8">
     <title>导航主页</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: system-ui;
             text-align: center;
-            margin-top: 100px;
-            background-color: #fff7ed; /* 暖米色背景，柔和温馨，护眼 */
+            min-height: 100vh;
+            background-color: #fff7ed;
+            background-image:
+                linear-gradient(rgba(255, 247, 237, 0.72), rgba(255, 247, 237, 0.72)),
+                url("https://img.icons8.com/color/96/ea580c/flag.png"),
+                url("https://img.icons8.com/ios-filled/96/ea580c/monument.png");
+            background-repeat: no-repeat;
+            background-position: left 8% top 12%, right 8% bottom 10%;
+            background-size: 160px, 130px;
+            padding: 80px 20px 40px;
         }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
         h1 {
             color: #431407;
-            margin-bottom: 40px;
+            margin-bottom: 12px;
+            font-size: 32px;
         }
+
+        .subtitle {
+            color: #78350f;
+            margin-bottom: 48px;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+
         a {
             display: inline-block;
             padding: 18px 36px;
             font-size: 20px;
-            background: #ea580c; /* 暖橙色按钮，温和醒目，不刺眼 */
+            background: #ea580c;
             color: #fff;
             text-decoration: none;
             border-radius: 12px;
             margin: 12px;
             transition: all 0.25s ease;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
+
         a:hover {
             background: #c2410c;
-            transform: translateY(-2px); /* 悬浮轻微上浮，增加互动感 */
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .footer-tip {
+            margin-top: 60px;
+            color: #9a3412;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <h1>欢迎访问</h1>
-    <a href="./shijianzhou/">打开复兴之路时间轴网页</a>
-    <a href="./datishuyusuca/">打开答题术语速查网页</a>
-    <a href="./9shangquancefuxi/">打开九上全册复习与练习</a>
+    <div class="container">
+        <h1>欢迎访问道德与法治学习资源库</h1>
+        <p class="subtitle">复兴之路 · 大事与素材 · 九上全册复习</p>
+
+        <a href="./shijianzhou/">打开复兴之路时间轴网页</a>
+        <a href="./datishuyusuca/">打开答题术语速查网页</a>
+        <a href="./9shangquancefuxi/">打开九上全册复习与练习</a>
+
+        <p class="footer-tip">选择学习入口，开始今天的复习</p>
+    </div>
 </body>
 </html>
